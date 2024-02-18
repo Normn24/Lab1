@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Lab1</title>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="tabs">
+      <li class="tabs-title active" data-tab="task1">Task 1</li>
+      <li class="tabs-title" data-tab="task2">Task 2</li>
+      <li class="tabs-title" data-tab="task3">Task 3</li>
+    </ul>
+    <ul class="tabs-content">
+
+      <li data-tab-content="task1">
+        <div class="task">
+          <div class="coolinput">
+            <label for="input__firstElement" class="text">Enter N:</label>
+            <input type="number" id="input__firstElement" placeholder="Write here..." name="input" class="input">
+          </div>
+          <div class="coolinput">
+            <label for="input__secondElement" class="text">Enter K:</label>
+            <input type="number" id="input__secondElement" placeholder="Write here..." name="input" class="input">
+          </div>
+          <button onclick="displayResult()">Result</button>
+          <p class="result__task1">The Result: <span></span></p>
+        </div>
+      </li>
+
+      <li data-tab-content="task2">
+        <div class="task">
+          <div class="coolinput">
+            <label for="input__task2" class="text">Enter the string:</label>
+            <input type="text" id="input__task2" placeholder="Write here..." name="input" class="input">
+          </div>
+          <select id="type__input" autofocus>
+            <option disabled="disabled" selected="selected">Choose the type</option>
+            <option>number</option>
+            <option>string</option>
+          </select>
+          <button onclick="filterBy()">The result</button>
+          <p class="result__task2">The Result: <span></span></p>
+        </div>
+      </li>
+
+      <li data-tab-content="task3">
+        <div class="task">
+          <select class="lengthOfPassword"></select>
+          <button onclick="generateRandomPassword()">Generate password</button>
+          <p class="result__task3">The password: <span></span></p>
+        </div>
+      </li>
+
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
